@@ -17,7 +17,7 @@ jobs:
       with:
         creds: ${{ secrets.AppServiceCMST385 }}
 
-    - name: Deploy to Asure Web App
+    - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'cmst385-umgc-kstarken1'
