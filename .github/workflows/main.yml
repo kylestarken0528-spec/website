@@ -1,0 +1,22 @@
+name: Deploy HTML Files to AppService - CMST385
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@main
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'cmst385-umgc-kstarken1'
+        slot-name: 'production'
+
+        # Match this to your secret name in GitHub
+        publish-profile: ${{ secrets.AppServiceCMST385 }}
