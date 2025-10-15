@@ -18,5 +18,4 @@ jobs:
         app-name: 'cmst385-umgc-kstarken1'
         slot-name: 'production'
 
-        # Match this to your secret name in GitHub
         publish-profile: ${{ secrets.AppServiceCMST385 }}
