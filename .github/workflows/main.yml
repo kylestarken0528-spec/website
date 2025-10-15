@@ -12,10 +12,14 @@ jobs:
     steps:
     - uses: actions/checkout@main
 
-    - name: Deploy to Azure Web App
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AppServiceCMST385 }}
+
+    - name: Deploy to Asure Web App
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'cmst385-umgc-kstarken1'
         slot-name: 'production'
-
         publish-profile: ${{ secrets.AppServiceCMST385 }}
