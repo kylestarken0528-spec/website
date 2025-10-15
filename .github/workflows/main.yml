@@ -1,4 +1,4 @@
-name: Deploy HTML Files to AppService - CMST385
+name: Deploy HTML Files to AppServices - CMST385
 
 on:
   push:
@@ -15,11 +15,11 @@ jobs:
     - name: Azure Login
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.AppServiceCMST385 }}
+        creds: ${{ secrets.AppServicesCMST385 }}
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
         app-name: 'cmst385-umgc-kstarken1'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AppServiceCMST385 }}
+        publish-profile: ${{ secrets.AppServicesCMST385 }}
