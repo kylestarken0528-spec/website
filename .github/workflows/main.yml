@@ -18,3 +18,4 @@ jobs:
         app-name: 'cmst385-umgc-kstarken1'
         slot-name: 'production'
         publish-profile: ${{ secrets.AppServicesCMST385 }}
+        package: './project1'
